@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Servicios Jurídicos Integrales | SJI Abogados</title>
+
+<meta name="description"
+content="Servicios Jurídicos Integrales. Asesoría y representación legal en Monterrey, Nuevo León. Estrategia legal con rostro humano.">
+
+<style>
+
+:root {
+  --azul: #081b34;
+  --azul-claro: #112d4e;
+  --dorado: #c6a45d;
+  --blanco: #ffffff;
+  --gris: #f4f5f7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #263348;
+  background: white;
+  line-height: 1.7;
+}
+
+header {
+  background: var(--azul);
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: var(--dorado);
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  display: block;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--dorado);
+}
+
+.hero {
+  min-height: 610px;
+  background:
+    radial-gradient(
+      circle at 70% 30%,
+      #244465,
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      #061426,
+      #102b4b
+    );
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.emblema {
+  font-size: 75px;
+  color: var(--dorado);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 6vw, 65px);
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  color: var(--dorado);
+  margin-bottom: 35px;
+}
+
+.hero p {
+  font-size: 21px;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.boton {
+  display: inline-block;
+  background: var(--dorado);
+  color: var(--azul);
+  padding: 15px 30px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background: white;
+}
+
+section {
+  padding: 90px 10%;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.titulo h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  color: var(--azul);
+}
+
+.linea {
+  width: 75px;
+  height: 3px;
+  background: var(--dorado);
+  margin: 20px auto;
+}
+
+.introduccion {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.servicios {
+  background: var(--gris);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.tarjeta {
+  background: white;
+  padding: 35px 25px;
+  border-top: 4px solid var(--dorado);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-7px);
+}
+
+.tarjeta h3 {
+  color: var(--azul);
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.tarjeta p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #596477;
+}
+
+.filosofia {
+  background: var(--azul);
+  color: white;
+  text-align: center;
+}
+
+.filosofia h2 {
+  color: var(--dorado);
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.filosofia p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 19px;
+}
+
+.contacto {
+  text-align: center;
+}
+
+.contacto p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.aviso {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #667085;
+}
+
+footer {
+  background: #061426;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+footer h3 {
+  color: var(--dorado);
+  letter-spacing: 2px;
+}
+
+footer p {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  section {
+    padding: 65px 7%;
+  }
+
+  .hero h2 {
+    letter-spacing: 2px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    SJI
+    <span>SERVICIOS JURÍDICOS INTEGRALES</span>
+  </div>
+
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#nosotros">NOSOTROS</a>
+    <a href="#servicios">SERVICIOS</a>
+    <a href="#filosofia">FILOSOFÍA</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+
+  <div class="hero-content">
+
+    <div class="emblema">⚖</div>
+
+    <h1>
+      SERVICIOS<br>
+      JURÍDICOS<br>
+      INTEGRALES
+    </h1>
+
+    <h2>SJI ABOGADOS</h2>
+
+    <p>
+      «Estrategia legal con rostro humano».
+    </p>
+
+    <a href="#servicios" class="boton">
+      CONOCE NUESTROS SERVICIOS
+    </a>
+
+  </div>
+
+</section>
+
+<section id="nosotros">
+
+  <div class="titulo">
+    <h2>Compromiso con la justicia</h2>
+    <div class="linea"></div>
+  </div>
+
+  <div class="introduccion">
+
+    <p>
+      En Servicios Jurídicos Integrales creemos que
+      detrás de cada asunto legal existe una historia,
+      una persona y derechos que merecen ser defendidos.
+    </p>
+
+    <br>
+
+    <p>
+      Nuestra filosofía se fundamenta en el estudio
+      jurídico, la atención personalizada y el
+      desarrollo de estrategias legales adaptadas
+      a las circunstancias de cada caso.
+    </p>
+
+    <br>
+
+    <p>
+      Ejercemos la abogacía con responsabilidad,
+      profesionalismo, confidencialidad y
+      compromiso con nuestros clientes.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="servicios" id="servicios">
+
+  <div class="titulo">
+    <h2>Nuestras áreas de práctica</h2>
+    <div class="linea"></div>
+  </div>
+
+  <div class="grid">
+
+    <div class="tarjeta">
+      <h3>⚖ Derecho Penal</h3>
+      <p>
+        Asesoría y representación jurídica en
+        procedimientos penales, defensa y
+        protección de derechos.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Derecho Familiar</h3>
+      <p>
+        Divorcios, pensiones alimenticias,
+        guarda y custodia, convivencias,
+        adopciones y asuntos familiares.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Derecho Civil</h3>
+      <p>
+        Controversias civiles, contratos,
+        obligaciones, sucesiones y
+        responsabilidad civil.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Derecho Mercantil</h3>
+      <p>
+        Litigios mercantiles, controversias
+        contractuales, títulos de crédito
+        y recuperación judicial de adeudos.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Juicio de Amparo</h3>
+      <p>
+        Defensa constitucional frente a
+        actos de autoridad que puedan
+        vulnerar derechos humanos.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Justicia para Adolescentes</h3>
+      <p>
+        Asesoría y representación jurídica
+        en procedimientos del sistema
+        integral de justicia penal
+        para adolescentes.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Derecho Administrativo</h3>
+      <p>
+        Controversias frente a actos
+        de autoridad y procedimientos
+        de responsabilidad patrimonial
+        del Estado.
+      </p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Consultoría Jurídica</h3>
+      <p>
+        Análisis de asuntos legales,
+        prevención de conflictos,
+        elaboración de instrumentos
+        jurídicos y diseño de estrategias.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="filosofia" id="filosofia">
+
+  <h2>Nuestra filosofía</h2>
+
+  <div class="linea"></div>
+
+  <p>
+    La justicia exige conocimiento,
+    preparación y determinación.
+    Pero también exige sensibilidad
+    para comprender a las personas
+    cuyos derechos defendemos.
+  </p>
+
+  <br>
+
+  <p>
+    En SJI entendemos que cada caso
+    requiere una estrategia jurídica propia,
+    sustentada en el análisis,
+    la responsabilidad profesional
+    y el respeto a la dignidad humana.
+  </p>
+
+  <br>
+
+  <p style="color:#c6a45d;">
+    Estrategia legal con rostro humano.
+  </p>
+
+</section>
+
+<section class="contacto" id="contacto">
+
+  <div class="titulo">
+    <h2>Contacto</h2>
+    <div class="linea"></div>
+  </div>
+
+  <p>
+    Estamos en Monterrey, Nuevo León, México.
+  </p>
+
+  <p>
+    Para solicitar información sobre nuestros
+    servicios jurídicos, próximamente
+    encontrarás aquí nuestros canales
+    oficiales de atención.
+  </p>
+
+  <p class="aviso">
+    Sitio en desarrollo.
+    La información publicada es de carácter
+    general y no constituye asesoría jurídica
+    para un caso concreto.
+  </p>
+
+</section>
+
+</main>
+
+<footer>
+
+  <h3>SJI ABOGADOS</h3>
+
+  <p>
+    SERVICIOS JURÍDICOS INTEGRALES
+  </p>
+
+  <p>
+    Estrategia legal con rostro humano.
+  </p>
+
+  <p>
+    Monterrey, Nuevo León, México.
+  </p>
+
+  <p id="copyright"></p>
+
+</footer>
+
+<script>
+  document.getElementById("copyright").textContent =
+    "© " + new Date().getFullYear() +
+    " Servicios Jurídicos Integrales. Todos los derechos reservados.";
+</script>
+
+</body>
+</html>
